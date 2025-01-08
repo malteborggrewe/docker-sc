@@ -15,18 +15,18 @@ RUN apt-get update && apt-get install -y software-properties-common && \
 
 # Install system libraries
 RUN apt-get update && apt-get install -y \
-    python3-pip=22.0.2+dfsg-1ubuntu0.5 \
-    libglpk40=5.0-1 \
-    libglpk-dev=5.0-1 \
-    libzmq3-dev=4.3.4-2 \
-    libgsl-dev=2.7.1+dfsg-3 \
-    zlib1g-dev=1:1.2.11.dfsg-2ubuntu9.2 \
-    libbz2-dev=1.0.8-5build1 \
-    liblzma-dev=5.2.5-2ubuntu1 \
-    libcurl4-openssl-dev=7.81.0-1ubuntu1.19 \
-    libssl-dev=3.0.2-0ubuntu1.18 \
-    libxml2-dev=2.9.13+dfsg-1ubuntu0.4 \
-    libhdf5-dev=1.10.7+repack-4ubuntu2 \
+    python3-pip \
+    libglpk40 \
+    libglpk-dev \
+    libzmq3-dev \
+    libgsl-dev \
+    zlib1g-dev \
+    libbz2-dev \
+    liblzma-dev \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libxml2-dev \
+    libhdf5-dev \
     && apt-get clean
 
 # Install quarto
@@ -37,7 +37,7 @@ RUN apt-get update && apt-get install -y \
     && rm quarto-linux-amd64.deb
 
 # Install base python packages
-RUN pip3 install poetry==1.8.4 ipykernel==6.29.5 jupyter
+RUN pip3 install poetry==1.8.4 ipykernel jupyter
 
 # Set the working directory
 WORKDIR /analysis
