@@ -55,8 +55,8 @@ RUN R -e "install.packages(c('renv', 'IRkernel', 'languageserver', 'rmarkdown'))
 RUN Rscript -e "IRkernel::installspec(user = FALSE)"
 
 # Install R packages using renv (restore R environment)
-RUN R -e "renv::restore()"
 RUN R -e "renv::activate()"
+RUN R -e "renv::restore()"
 
 # Keep container running
 CMD ["tail", "-f", "/dev/null"]
