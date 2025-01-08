@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "single-cell"
+description = "Tools for single-cell analysis"
+version = "0.1.0"
+authors = ["Malte Borggrewe <hello@malteborggrewe.de>"]
+license = "n"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+scanpy = "1.9.8"
+pandas = "^2.2.1"
+numpy = "^1.26.4"
+seaborn = "^0.13.2"
+matplotlib = "^3.8.3"
+pyyaml = "^6.0.1"
+tbb = "^2021.12.0"
+harmonypy = "^0.0.9"
+leidenalg = "^0.10.2"
+scirpy = "^0.16.0"
+matplotlib-venn = "^0.11.10"
+mudata = "^0.2.3"
+muon = "^0.1.5"
+preproc = "^23.2.13"
+scrublet = "^0.2.3"
+umap-learn = "^0.5.5"
+gseapy = "1.0.3"
+celltypist = "^1.6.2"
+decoupler = "^1.6.0"
+pydeseq2 = "^0.4.8"
+pyscenic = "^0.12.1"
+liana = {version = "^1.1.0", python = "^3.9, <3.12"}
+cell2cell = "^0.7.3"
+annotator = "^0.14.2"
+omnipath = "^1.0.8"
+sc-dandelion = "^0.3.6.post1"
+squidpy = "^1.6.2"
+scvelo = "^0.3.2"
+anndata = "0.10.8"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
