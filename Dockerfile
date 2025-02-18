@@ -50,13 +50,14 @@ COPY pyproject.toml /analysis/
 RUN poetry install --without dev
 
 # Install important R packages for jupyter and others
-RUN R -e "install.packages(c('renv', 'IRkernel', 'languageserver', 'rmarkdown'))"
+RUN Rscript -e "install.packages(c('IRkernel', 'languageserver', 'rmarkdown'))"
+RUN Rscript -e "remotes::install_github('rstudio/renv@v1.1.1')"
 # Activate Jupyter R Kernel
 RUN Rscript -e "IRkernel::installspec(user = FALSE)"
 
 # Install R packages using renv (restore R environment)
-RUN R -e "renv::activate()"
-RUN R -e "renv::restore()"
+RUN Rscript -e "renv::activate()"
+RUN Rscript -e "renv::restore()"
 
 # Keep container running
 CMD ["tail", "-f", "/dev/null"]

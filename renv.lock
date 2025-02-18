@@ -1507,8 +1507,6 @@
       "RemoteRef": "v1.1.1",
       "RemoteSha": "2fbf8403c984bd4fae81776ba59d884d72742512"
     },
-      "Hash": "41b847654f567341725473431dd0d5ab"
-    },
     "repr": {
       "Package": "repr",
       "Version": "1.1.6",
