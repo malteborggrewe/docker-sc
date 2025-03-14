@@ -3,6 +3,7 @@ FROM rocker/r-ver:4.3.2
 
 # Environment settings
 ENV POETRY_VIRTUALENVS_CREATE=false
+ENV RENV_PATHS_LIBRARY /etc/R/renv/library
 
 # Install Python (3.10.12)
 RUN apt-get update && apt-get install -y software-properties-common && \
